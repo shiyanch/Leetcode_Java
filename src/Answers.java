@@ -3,14 +3,18 @@ import ContainsDuplicate.ContainsDuplicate;
 import MissingNumber.MissingNumber;
 import ProductOfArrayExceptySelf.ProductOfArrayExceptSelf;
 import SingleNumber.SingleNumber;
+import ValidAnagram.ValidAnagam;
 
 import java.util.*;
 
 public class Answers {
 
     public static void main(String[] args ) {
-        SingleNumber singleNumber = new SingleNumber();
-        System.out.print(singleNumber.singleNumber(new int[] {1,1,3,2,3,4,2}));
+        ValidAnagam validAnagam = new ValidAnagam();
+        if(validAnagam.isAnagram("", ""))
+            System.out.println("True");
+        else
+            System.out.println("False");
 
     }
 }

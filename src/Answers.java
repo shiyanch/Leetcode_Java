@@ -2,6 +2,7 @@
 import ContainsDuplicate.ContainsDuplicate;
 import MissingNumber.MissingNumber;
 import ProductOfArrayExceptySelf.ProductOfArrayExceptSelf;
+import RotateImage.RotateImage;
 import SingleNumber.SingleNumber;
 import SortColors.SortColors;
 import ValidAnagram.ValidAnagam;
@@ -11,7 +12,8 @@ import java.util.*;
 public class Answers {
 
     public static void main(String[] args ) {
-        SortColors sortColors = new SortColors();
-        sortColors.sortColors2(new int[] {0,2,1,2,1,0,0,1});
+        RotateImage rotateImage = new RotateImage();
+        rotateImage.rotate(new int[][] {{1,2,3},{4,5,6},{7,8,9}});
+
     }
 }

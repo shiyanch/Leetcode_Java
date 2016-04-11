@@ -1,13 +1,10 @@
-
-
-import TwoSum.TwoSum;
+import ContainsDuplicateII.ContainsDuplicateII;
+import FindPeakElement.FindPeakElement;
 
 public class Answers {
 
     public static void main(String[] args ) {
-        TwoSum twoSum = new TwoSum();
-        twoSum.twoSum(new int[] {3,3,4}, 6);
-
-        twoSum.twoSum(new int[] {}, 0);
+        FindPeakElement findPeakElement = new FindPeakElement();
+        System.out.println(findPeakElement.findPeakElement(new int[] {}));
     }
 }

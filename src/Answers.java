@@ -1,10 +1,11 @@
 import ContainsDuplicateII.ContainsDuplicateII;
 import FindPeakElement.FindPeakElement;
+import OddEvenLinkedList.OddEvenLinkedList;
 
 public class Answers {
 
     public static void main(String[] args ) {
-        FindPeakElement findPeakElement = new FindPeakElement();
-        System.out.println(findPeakElement.findPeakElement(new int[] {}));
+        OddEvenLinkedList oddEvenLinkedList = new OddEvenLinkedList();
+        oddEvenLinkedList.test();
     }
 }

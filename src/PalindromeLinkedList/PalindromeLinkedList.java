@@ -15,14 +15,13 @@ public class PalindromeLinkedList {
         }
     }
 
+    // step1. find the midNode
+    // step2. reverse nodes after midNode
+    // step3. use two pointer, one step by one step, check value of each pointer
     public boolean isPalindrome(ListNode head) {
 
         if(head == null || head.next == null)
             return true;
-
-        if(head.next.next == null) {
-            return head.val == head.next.val;
-        }
 
         ListNode midNode = findMidNode(head);
         midNode.next = reverse(midNode.next);

@@ -1,10 +1,9 @@
-import RemoveLinkedListElements.RemoveLinkedListElements;
-import ReorderList.ReorderList;
+import RotateList.RotateList;
 
 public class Answers {
 
     public static void main(String[] args ) {
 
-        new ReorderList().test();
+        new RotateList().test();
     }
 }

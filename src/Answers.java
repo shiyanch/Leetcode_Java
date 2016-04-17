@@ -1,9 +1,10 @@
-import AddDigits.AddDigits;
+import BinaryTreeInorderTraversal.BinaryTreeInorderTraversal;
+import BinaryTreePostorderTraversal.BinaryTreePostorderTraversal;
 
 public class Answers {
 
     public static void main(String[] args ) {
 
-        System.out.println(new AddDigits().addDigits(1853));
+        new BinaryTreePostorderTraversal().test();
     }
 }

@@ -1,8 +1,6 @@
 package BinaryTreeInorderTraversal;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * 94. Binary Tree Inorder Traversal
@@ -83,6 +81,24 @@ public class BinaryTreeInorderTraversal {
             cur = cur.right;
         }
         return list;
+    }
+
+    //concise solution
+    public List<Integer> inorderTraversal3(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode p = root;
+        while(!stack.isEmpty() || p != null) {
+            if(p != null) {
+                stack.push(p);
+                p = p.left;
+            } else {
+                TreeNode node = stack.pop();
+                result.add(node.val);  // Add after all left children
+                p = node.right;
+            }
+        }
+        return result;
     }
 
     public void test() {

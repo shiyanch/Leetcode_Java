@@ -1,9 +1,11 @@
-import BulbSwithcher.BulbSwithcher;
+import HappyNumber.HappyNumber;
 
 public class Answers {
 
     public static void main(String[] args ) {
-        BulbSwithcher bulbSwithcher = new BulbSwithcher();
-        System.out.println(bulbSwithcher.bulbSwitch(3));
+        if(new HappyNumber().isHappy(2))
+            System.out.println("true");
+        else
+            System.out.println("false");
     }
 }

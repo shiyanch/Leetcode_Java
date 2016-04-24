@@ -122,4 +122,17 @@ public class SymmetricTree {
 
         return true;
     }
+
+    private boolean process2(TreeNode left, TreeNode right, Stack<TreeNode> stack) {
+        if(left == null && right == null)
+            return true;
+
+        if(left == null ^ right == null)
+            return false;
+
+        stack.push(left);
+        stack.push(right);
+        return true;
+
+    }
 }

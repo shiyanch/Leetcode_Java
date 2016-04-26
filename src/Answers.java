@@ -1,3 +1,4 @@
+import PathSum.PathSum;
 import ReverseString.ReverseString;
 import SymmetricTree.SymmetricTree;
 
@@ -9,6 +10,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        new ReverseString().reverseString("hello world");
+        new PathSum().test();
     }
 }

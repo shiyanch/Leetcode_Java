@@ -1,3 +1,4 @@
+import ConvertSortedArrayToBinarySearchTree.ConvertSortedArrayToBinarySearchTree;
 import PathSum.PathSum;
 import ReverseString.ReverseString;
 import SymmetricTree.SymmetricTree;
@@ -10,6 +11,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        new PathSum().test();
+        new ConvertSortedArrayToBinarySearchTree().sortedArrayToBST(new int[] {1,2,3,4,5,6,7,8,9,10});
     }
 }

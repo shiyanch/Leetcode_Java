@@ -1,5 +1,6 @@
 import BinaryTreeRightSideView.BinaryTreeRightSideView;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
+import PascalsTriangle.PascalsTriangle;
 import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
 
 
@@ -11,6 +12,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new FindMinimumInRotatedSortedArray().findMin(new int[] {4,5,6,7,0,1,2}));
+        new PascalsTriangle().generate(4);
     }
 }

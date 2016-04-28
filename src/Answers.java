@@ -1,7 +1,6 @@
-import ConvertSortedArrayToBinarySearchTree.ConvertSortedArrayToBinarySearchTree;
-import PathSum.PathSum;
-import ReverseString.ReverseString;
-import SymmetricTree.SymmetricTree;
+import BinaryTreeRightSideView.BinaryTreeRightSideView;
+import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
+
 
 public class Answers {
 
@@ -11,6 +10,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        new ConvertSortedArrayToBinarySearchTree().sortedArrayToBST(new int[] {1,2,3,4,5,6,7,8,9,10});
+        new PopulatingNextRightPointersInEachNodeII().test();
     }
 }

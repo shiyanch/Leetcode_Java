@@ -1,5 +1,6 @@
 import BinaryTreeRightSideView.BinaryTreeRightSideView;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
+import LengthOfLastWord.LengthOfLastWord;
 import PascalsTriangle.PascalsTriangle;
 import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
 
@@ -12,6 +13,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        new PascalsTriangle().generate(4);
+        System.out.println(new LengthOfLastWord().lengthOfLastWord(""));
     }
 }

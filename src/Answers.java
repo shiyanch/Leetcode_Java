@@ -1,4 +1,5 @@
 import BinaryTreeRightSideView.BinaryTreeRightSideView;
+import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import LengthOfLastWord.LengthOfLastWord;
 import PascalsTriangle.PascalsTriangle;
@@ -13,6 +14,8 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new LengthOfLastWord().lengthOfLastWord(""));
+
+        System.out.println(new ExcelSheetColumnTitle()
+                .convertToTitle(26));
     }
 }

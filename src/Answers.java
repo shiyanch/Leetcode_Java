@@ -16,7 +16,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        new PlusOne().plusOne(new int[] {9,8,7,6,5,4,3,2,1,0});
+        new PlusOne().plusOne3(new int[] {9,9});
 //        System.out.println(new ReverseInteger().reverse(1));
     }
 }

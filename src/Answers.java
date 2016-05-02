@@ -3,6 +3,7 @@ import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import LengthOfLastWord.LengthOfLastWord;
 import PascalsTriangle.PascalsTriangle;
+import PlusOne.PlusOne;
 import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
 import ReverseInteger.ReverseInteger;
 
@@ -15,7 +16,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-
-        System.out.println(new ReverseInteger().reverse(1));
+        new PlusOne().plusOne(new int[] {9,8,7,6,5,4,3,2,1,0});
+//        System.out.println(new ReverseInteger().reverse(1));
     }
 }

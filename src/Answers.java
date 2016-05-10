@@ -1,4 +1,5 @@
 import BinaryTreeRightSideView.BinaryTreeRightSideView;
+import ConvertSortedListToBinarySearchTree.ConvertSortedListToBinarySearchTree;
 import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import LengthOfLastWord.LengthOfLastWord;
@@ -16,7 +17,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        new PlusOne().plusOne3(new int[] {9,9});
-//        System.out.println(new ReverseInteger().reverse(1));
+        new ConvertSortedListToBinarySearchTree().test();
     }
 }

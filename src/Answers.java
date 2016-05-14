@@ -7,6 +7,7 @@ import PascalsTriangle.PascalsTriangle;
 import PlusOne.PlusOne;
 import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
 import ReverseInteger.ReverseInteger;
+import SumRootToLeafNumbers.SumRootToLeafNumbers;
 
 
 public class Answers {
@@ -17,6 +18,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        new ConvertSortedListToBinarySearchTree().test();
+        new SumRootToLeafNumbers().test();
     }
 }

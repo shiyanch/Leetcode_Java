@@ -49,11 +49,4 @@ public class SumRootToLeafNumbers {
         if(root.left == null && root.right == null)
             sum += (tempSum*10 + root.val);
     }
-
-    public void test() {
-        TreeNode root = new TreeNode(0);
-        TreeNode sub = new TreeNode(1);
-        root.left = sub;
-        sumNumbers(root);
-    }
 }

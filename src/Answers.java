@@ -2,6 +2,7 @@ import BinaryTreeRightSideView.BinaryTreeRightSideView;
 import ConvertSortedListToBinarySearchTree.ConvertSortedListToBinarySearchTree;
 import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
+import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
 import LengthOfLastWord.LengthOfLastWord;
 import PascalsTriangle.PascalsTriangle;
 import PlusOne.PlusOne;
@@ -17,5 +18,7 @@ public class Answers {
 //            System.out.println("true");
 //        else
 //            System.out.println("false");
+
+        new FlattenBinaryTreeToLinkedList().test();
     }
 }

@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * 99. Recover Binary Search Tree
+ *
  * wo elements of a binary search tree (BST) are swapped by mistake.
  * Recover the tree without changing its structure.
  *
@@ -21,42 +23,36 @@ public class RecoverBinarySearchTree {
         }
     }
 
-    // bfs
+    private TreeNode first = null;
+    private TreeNode second = null;
+    private TreeNode prev = new TreeNode(Integer.MIN_VALUE);
+
     public void recoverTree(TreeNode root) {
-        if(root == null)
-            return;
+        traverse(root);
 
-        TreeNode first = null;
-        TreeNode second = null;
-
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-
-        while(!queue.isEmpty()) {
-            TreeNode cur = queue.poll();
-
-            if((cur.left != null && cur.val < cur.left.val)
-                || (cur.right != null && cur.val > cur.right.val)) {
-                if(first == null)
-                    first = cur;
-                else {
-                    second = cur;
-                    break;
-                }
-            }
-
-            if(cur.left != null)
-                queue.add(cur.left);
-
-            if(cur.right != null)
-                queue.add(cur.right);
-        }
-
-        System.out.println(first.val+" "+second.val);
         int temp = first.val;
         first.val = second.val;
         second.val = temp;
     }
+
+    private void traverse(TreeNode root) {
+        if(root == null)
+            return;
+
+        traverse(root.left);
+
+        if(first == null && prev.val >= root.val)
+            first = prev;
+
+        if(first != null && prev.val >= root.val)
+            second = root;
+
+        prev = root;
+
+        traverse(root.right);
+    }
+
+
 
     public void test() {
         TreeNode node1 = new TreeNode(1);

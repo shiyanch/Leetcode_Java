@@ -30,6 +30,8 @@ public class ValidateBinarySearhTree {
         int last = Integer.MIN_VALUE;
 
         TreeNode p = root;
+
+        // to preserve minimum node of left-subtree
         TreeNode pre = null;
 
         while(!stack.isEmpty() || p != null) {

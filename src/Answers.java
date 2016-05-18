@@ -2,6 +2,7 @@ import BinaryTreeRightSideView.BinaryTreeRightSideView;
 import ConvertSortedListToBinarySearchTree.ConvertSortedListToBinarySearchTree;
 import CountCompleteTreeNodes.CountCompleteTreeNodes;
 import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
+import FindMedianFromDataStream.FindMedianFromDataStream;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
 import LengthOfLastWord.LengthOfLastWord;
@@ -25,9 +26,15 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-
-        System.out.println(new SlidingWindowMaximum().maxSlidingWindow2(
-                new int[] {1,3,-1,-3,5,3,6,7}, 3));
+        FindMedianFromDataStream mf = new FindMedianFromDataStream();
+        mf.addNum(1);
+        mf.addNum(3);
+        mf.addNum(5);
+        mf.addNum(2);
+        mf.addNum(4);
+        mf.addNum(7);
+        mf.addNum(6);
+        System.out.println(mf.findMedian());
 
     }
 }

@@ -11,6 +11,7 @@ import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEach
 import RecoverBinarySearchTree.RecoverBinarySearchTree;
 import ReverseInteger.ReverseInteger;
 import SerializeAndDeserializeBinaryTree.SerializeAndDeserializeBinaryTree;
+import SlidingWindowMaximum.SlidingWindowMaximum;
 import SumRootToLeafNumbers.SumRootToLeafNumbers;
 import SuperUglyNumber.SuperUglyNumber;
 import UglyNumberII.UglyNumberII;
@@ -24,7 +25,9 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new SuperUglyNumber().nthSuperUglyNumber(2, new int[]{2,3,5}));
+
+        System.out.println(new SlidingWindowMaximum().maxSlidingWindow2(
+                new int[] {1,3,-1,-3,5,3,6,7}, 3));
 
     }
 }

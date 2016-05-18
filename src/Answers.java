@@ -12,6 +12,7 @@ import RecoverBinarySearchTree.RecoverBinarySearchTree;
 import ReverseInteger.ReverseInteger;
 import SerializeAndDeserializeBinaryTree.SerializeAndDeserializeBinaryTree;
 import SumRootToLeafNumbers.SumRootToLeafNumbers;
+import UglyNumberII.UglyNumberII;
 
 
 public class Answers {
@@ -22,7 +23,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        new SerializeAndDeserializeBinaryTree().test();
+        new UglyNumberII().nthUglyNumver(10);
 
     }
 }

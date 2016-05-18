@@ -1,6 +1,8 @@
 package FindMedianFromDataStream;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * 295. Find Median from Data Stream
@@ -56,4 +58,22 @@ public class FindMedianFromDataStream {
         else
             return array.get(size/2);
     }
+
+    private Queue<Long> small = new PriorityQueue<>();
+    private Queue<Long> large = new PriorityQueue<>();
+
+    public void addNum2(int num) {
+        large.add((long)num);
+        small.add(-large.poll());
+
+        if(large.size() < small.size())
+            large.add(-small.poll());
+    }
+
+    public double findMedian2() {
+        return large.size()>small.size()
+                ?large.peek()
+                :(large.peek()-small.peek())/2.0;
+    }
+
 }

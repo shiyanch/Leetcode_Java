@@ -1,6 +1,7 @@
 package KthLargestElementInAnArray;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 /**
  * 215. Kth Largest Element in an Array
@@ -18,5 +19,18 @@ public class KthLargestElementInAnArray {
 
         Arrays.sort(nums);
         return nums[nums.length-k+1];
+    }
+
+    public int findKthLargest2(int[] nums, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+        for(int num:nums)
+            pq.add(num);
+
+        int temp = -1;
+        while (k-- > 0) {
+            temp = pq.poll();
+        }
+        return temp;
     }
 }

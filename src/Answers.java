@@ -5,6 +5,7 @@ import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
 import FindMedianFromDataStream.FindMedianFromDataStream;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
+import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import LengthOfLastWord.LengthOfLastWord;
 import PascalsTriangle.PascalsTriangle;
 import PlusOne.PlusOne;
@@ -26,15 +27,13 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        FindMedianFromDataStream mf = new FindMedianFromDataStream();
-        mf.addNum(1);
-        mf.addNum(3);
-        mf.addNum(5);
-        mf.addNum(2);
-        mf.addNum(4);
-        mf.addNum(7);
-        mf.addNum(6);
-        System.out.println(mf.findMedian());
+        int[] res = new IntersectionOfTwoArrays().intersection(
+                new int[] {1},
+                new int[] {1,1}
+        );
+
+        for(int i:res)
+            System.out.print(i+" ");
 
     }
 }

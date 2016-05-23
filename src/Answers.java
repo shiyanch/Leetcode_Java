@@ -6,6 +6,7 @@ import FindMedianFromDataStream.FindMedianFromDataStream;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
 import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
+import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
 import LengthOfLastWord.LengthOfLastWord;
 import PascalsTriangle.PascalsTriangle;
 import PlusOne.PlusOne;
@@ -27,13 +28,11 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        int[] res = new IntersectionOfTwoArrays().intersection(
-                new int[] {1},
-                new int[] {1,1}
-        );
+        int[] hehe = new IntersectionOfTwoArraysII().intersect(new int[] {1}, new int[]{1});
+        for(int i:hehe)
+            System.out.print(i);
 
-        for(int i:res)
-            System.out.print(i+" ");
+        System.out.println();
 
     }
 }

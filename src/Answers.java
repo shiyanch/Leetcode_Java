@@ -1,4 +1,6 @@
 import BinaryTreeRightSideView.BinaryTreeRightSideView;
+import ConstructBinaryTreeFromInorderAndPreorderTraversal.ConstructBinaryTreeFromInorderAndPostorderTraversal;
+import ConstructBinaryTreeFromPreorderAndInorderTraversal.ConstructBinaryTreeFromPreorderAndInorderTraversal;
 import ConvertSortedListToBinarySearchTree.ConvertSortedListToBinarySearchTree;
 import CountCompleteTreeNodes.CountCompleteTreeNodes;
 import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
@@ -18,6 +20,7 @@ import SlidingWindowMaximum.SlidingWindowMaximum;
 import SumRootToLeafNumbers.SumRootToLeafNumbers;
 import SuperUglyNumber.SuperUglyNumber;
 import UglyNumberII.UglyNumberII;
+import WiggleSortII.WiggleSortII;
 
 
 public class Answers {
@@ -28,11 +31,10 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        int[] hehe = new IntersectionOfTwoArraysII().intersect(new int[] {1}, new int[]{1});
-        for(int i:hehe)
-            System.out.print(i);
-
-        System.out.println();
-
+//        new WiggleSortII().wiggleSort(new int[] {4,5,5,6});
+        new ConstructBinaryTreeFromInorderAndPostorderTraversal().buildTree(
+                new int[] {4,2,5,1,3,7,6},
+                new int[] {4,5,2,7,6,3,1}
+        );
     }
 }

@@ -11,6 +11,7 @@ import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
 import LengthOfLastWord.LengthOfLastWord;
 import PascalsTriangle.PascalsTriangle;
+import PathSumII.PathSumII;
 import PlusOne.PlusOne;
 import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
 import RecoverBinarySearchTree.RecoverBinarySearchTree;
@@ -32,9 +33,7 @@ public class Answers {
 //            System.out.println("false");
 
 //        new WiggleSortII().wiggleSort(new int[] {4,5,5,6});
-        new ConstructBinaryTreeFromInorderAndPostorderTraversal().buildTree(
-                new int[] {4,2,5,1,3,7,6},
-                new int[] {4,5,2,7,6,3,1}
-        );
+        new PathSumII().test();
+
     }
 }

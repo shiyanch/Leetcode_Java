@@ -11,6 +11,7 @@ import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
 import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
 import LengthOfLastWord.LengthOfLastWord;
+import LongestCommonPrefix.LongestCommonPrefix;
 import PascalsTriangle.PascalsTriangle;
 import PathSumII.PathSumII;
 import PlusOne.PlusOne;
@@ -35,7 +36,6 @@ public class Answers {
 //            System.out.println("false");
 
 //        new WiggleSortII().wiggleSort(new int[] {4,5,5,6});
-        System.out.println(new AddBinary().addBinary("11","1"));
 
     }
 }

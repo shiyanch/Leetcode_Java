@@ -1,3 +1,4 @@
+import AddBinary.AddBinary;
 import BinaryTreeRightSideView.BinaryTreeRightSideView;
 import ConstructBinaryTreeFromInorderAndPreorderTraversal.ConstructBinaryTreeFromInorderAndPostorderTraversal;
 import ConstructBinaryTreeFromPreorderAndInorderTraversal.ConstructBinaryTreeFromPreorderAndInorderTraversal;
@@ -34,7 +35,7 @@ public class Answers {
 //            System.out.println("false");
 
 //        new WiggleSortII().wiggleSort(new int[] {4,5,5,6});
-        new SingleNumberIII().singleNumber(new int[] {-1,0});
+        System.out.println(new AddBinary().addBinary("11","1"));
 
     }
 }

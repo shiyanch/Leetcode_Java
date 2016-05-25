@@ -17,6 +17,7 @@ import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEach
 import RecoverBinarySearchTree.RecoverBinarySearchTree;
 import ReverseInteger.ReverseInteger;
 import SerializeAndDeserializeBinaryTree.SerializeAndDeserializeBinaryTree;
+import SingleNumberIII.SingleNumberIII;
 import SlidingWindowMaximum.SlidingWindowMaximum;
 import SumRootToLeafNumbers.SumRootToLeafNumbers;
 import SuperUglyNumber.SuperUglyNumber;
@@ -33,7 +34,7 @@ public class Answers {
 //            System.out.println("false");
 
 //        new WiggleSortII().wiggleSort(new int[] {4,5,5,6});
-        new PathSumII().test();
+        new SingleNumberIII().singleNumber(new int[] {-1,0});
 
     }
 }

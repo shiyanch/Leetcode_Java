@@ -5,6 +5,7 @@ import ConstructBinaryTreeFromPreorderAndInorderTraversal.ConstructBinaryTreeFro
 import ConvertSortedListToBinarySearchTree.ConvertSortedListToBinarySearchTree;
 import CountAndSay.CountAndSay;
 import CountCompleteTreeNodes.CountCompleteTreeNodes;
+import CountPrimes.CountPrime;
 import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
 import FindMedianFromDataStream.FindMedianFromDataStream;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
@@ -38,7 +39,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new CountAndSay().countAndSay(5));
+        System.out.println(new CountPrime().countPrimes(3));
 
     }
 }

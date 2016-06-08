@@ -18,6 +18,7 @@ import PlusOne.PlusOne;
 import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
 import RecoverBinarySearchTree.RecoverBinarySearchTree;
 import ReverseInteger.ReverseInteger;
+import RomanToInteger.RomanToInteger;
 import SerializeAndDeserializeBinaryTree.SerializeAndDeserializeBinaryTree;
 import SingleNumberIII.SingleNumberIII;
 import SlidingWindowMaximum.SlidingWindowMaximum;
@@ -35,7 +36,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-//        new WiggleSortII().wiggleSort(new int[] {4,5,5,6});
+        System.out.println(new RomanToInteger().romnToInt("MMMCMXCIX"));
 
     }
 }

@@ -8,6 +8,7 @@ import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
 import FindMedianFromDataStream.FindMedianFromDataStream;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
+import IntegerToRoman.IntegerToRoman;
 import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
 import LengthOfLastWord.LengthOfLastWord;
@@ -36,7 +37,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new RomanToInteger().romnToInt("MMMCMXCIX"));
+        System.out.println(new IntegerToRoman().intToRoman(1984));
 
     }
 }

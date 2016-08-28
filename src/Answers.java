@@ -15,6 +15,7 @@ import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
 import LengthOfLastWord.LengthOfLastWord;
 import LongestCommonPrefix.LongestCommonPrefix;
+import MaximumSubarray.MaximumSubarray;
 import PascalsTriangle.PascalsTriangle;
 import PathSumII.PathSumII;
 import PlusOne.PlusOne;
@@ -27,6 +28,7 @@ import SingleNumberIII.SingleNumberIII;
 import SlidingWindowMaximum.SlidingWindowMaximum;
 import SumRootToLeafNumbers.SumRootToLeafNumbers;
 import SuperUglyNumber.SuperUglyNumber;
+import TwoSumII.TwoSumII;
 import UglyNumberII.UglyNumberII;
 import WiggleSortII.WiggleSortII;
 
@@ -39,7 +41,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new CountPrime().countPrimes(3));
-
+        System.out.println(new MaximumSubarray().maxSubArray(new int[] {-2,1,-3,4,-1,2,1,-5,4}));
     }
 }

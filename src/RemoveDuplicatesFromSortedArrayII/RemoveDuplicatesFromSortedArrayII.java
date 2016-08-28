@@ -1,6 +1,8 @@
 package RemoveDuplicatesFromSortedArrayII;
 
 /**
+ * 80. Remove Duplicates from Sorted Array II
+ *
  * Follow up for "Remove Duplicates":
  * What if duplicates are allowed at most twice?
  *
@@ -12,6 +14,18 @@ package RemoveDuplicatesFromSortedArrayII;
  */
 public class RemoveDuplicatesFromSortedArrayII {
     public int removeDuplicates(int[] nums) {
-        return 0;
+        int l=0,r=nums.length-1;
+        int count=0;
+
+        for(l=2;l<=r;l++) {
+            while (nums[l]==nums[l-1] && nums[l-1]==nums[l-2] && l<=r) {
+                for(int i=l;i<r;i++) {
+                    nums[i] = nums[i+1];
+                }
+                r--;
+                count++;
+            }
+        }
+        return nums.length-count;
     }
 }

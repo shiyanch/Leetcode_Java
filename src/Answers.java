@@ -21,6 +21,7 @@ import PathSumII.PathSumII;
 import PlusOne.PlusOne;
 import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
 import RecoverBinarySearchTree.RecoverBinarySearchTree;
+import RemoveDuplicatesFromSortedArrayII.RemoveDuplicatesFromSortedArrayII;
 import ReverseInteger.ReverseInteger;
 import RomanToInteger.RomanToInteger;
 import SerializeAndDeserializeBinaryTree.SerializeAndDeserializeBinaryTree;
@@ -41,6 +42,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new MaximumSubarray().maxSubArray(new int[] {-2,1,-3,4,-1,2,1,-5,4}));
+        System.out.println(new RemoveDuplicatesFromSortedArrayII().removeDuplicates(new int[] {1,1,2,2,2,2,3,3}));
     }
 }

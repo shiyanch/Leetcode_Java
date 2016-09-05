@@ -28,6 +28,7 @@ import RomanToInteger.RomanToInteger;
 import SerializeAndDeserializeBinaryTree.SerializeAndDeserializeBinaryTree;
 import SingleNumberIII.SingleNumberIII;
 import SlidingWindowMaximum.SlidingWindowMaximum;
+import Subsets.Subsets;
 import SumRootToLeafNumbers.SumRootToLeafNumbers;
 import SuperUglyNumber.SuperUglyNumber;
 import TwoSumII.TwoSumII;
@@ -43,6 +44,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new FourSum().fourSum(new int[] {1,0,-1,0,-2,2}, 0));
+        System.out.println(new Subsets().subsets(new int[] {1,2,3}));
     }
 }

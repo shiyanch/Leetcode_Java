@@ -10,6 +10,7 @@ import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
 import FindMedianFromDataStream.FindMedianFromDataStream;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
+import FourSum.FourSum;
 import IntegerToRoman.IntegerToRoman;
 import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
@@ -42,6 +43,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new RemoveDuplicatesFromSortedArrayII().removeDuplicates(new int[] {1,1,2,2,2,2,3,3}));
+        System.out.println(new FourSum().fourSum(new int[] {1,0,-1,0,-2,2}, 0));
     }
 }

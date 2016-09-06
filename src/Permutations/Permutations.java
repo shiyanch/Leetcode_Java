@@ -43,4 +43,27 @@ public class Permutations {
         }
         return ans;
     }
+
+    public List<List<Integer>> permute2(int[] nums) {
+        List<List<Integer>> ans = new ArrayList<List<Integer>>();
+        if(nums.length == 0)
+            return ans;
+
+        backtrack(ans, nums, new ArrayList<Integer>(), 0);
+        return ans;
+    }
+
+    private void backtrack(List<List<Integer>> ans, int[] nums, List<Integer> currentList, int index) {
+        if(currentList.size() == nums.length) {
+            ans.add(currentList);
+            return;
+        }
+
+        int n = nums[index];
+        for(int i=0;i<=currentList.size();i++) {
+            List<Integer> copy = new ArrayList<>(currentList);
+            copy.add(i, n);
+            backtrack(ans, nums, copy, index+1);
+        }
+    }
 }

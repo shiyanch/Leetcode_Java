@@ -24,15 +24,16 @@ public class RansomNote {
         if(magazine.length() < ransomNote.length())
             return false;
 
-        Map<Character, Integer> map = new HashMap<>();
+        int[] array = new int[26];
+
         for(char c : magazine.toCharArray())
-            map.put(c, map.getOrDefault(c, 0)+1);
+            array[c-'a']++;
 
         for(char c : ransomNote.toCharArray())
-            if(!map.containsKey(c) || map.get(c) == 0)
+            if(array[c-'a'] == 0)
                 return false;
             else
-                map.put(c, map.get(c)-1);
+                array[c-'a']--;
 
         return true;
     }

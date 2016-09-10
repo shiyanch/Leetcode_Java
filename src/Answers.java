@@ -11,6 +11,7 @@ import FindMedianFromDataStream.FindMedianFromDataStream;
 import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
 import FourSum.FourSum;
+import GenerateParentheses.GenerateParentheses;
 import IntegerToRoman.IntegerToRoman;
 import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
@@ -44,6 +45,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new Subsets().subsets(new int[] {1,2,3}));
+        System.out.println(new GenerateParentheses().generateParenthesis(4));
+
     }
 }

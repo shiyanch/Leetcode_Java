@@ -19,6 +19,7 @@ import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
 import LengthOfLastWord.LengthOfLastWord;
 import LongestCommonPrefix.LongestCommonPrefix;
 import LongestIncreasingSubsequence.LongestIncreasingSubsequence;
+import LongestSubstringWithoutRepeatingCharacters.LongestSubstringWithoutRepeatingCharacters;
 import MaximumSubarray.MaximumSubarray;
 import PascalsTriangle.PascalsTriangle;
 import PathSumII.PathSumII;
@@ -49,7 +50,7 @@ public class Answers {
 //            System.out.println("false");
 
 
-        System.out.println(new Candy().candy(new int[] {4,2,3,4,1}));
+        System.out.println(new LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstring("dvdf"));
 
     }
 }

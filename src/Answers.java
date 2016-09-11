@@ -1,5 +1,6 @@
 import AddBinary.AddBinary;
 import BinaryTreeRightSideView.BinaryTreeRightSideView;
+import Candy.Candy;
 import ConstructBinaryTreeFromInorderAndPreorderTraversal.ConstructBinaryTreeFromInorderAndPostorderTraversal;
 import ConstructBinaryTreeFromPreorderAndInorderTraversal.ConstructBinaryTreeFromPreorderAndInorderTraversal;
 import ConvertSortedListToBinarySearchTree.ConvertSortedListToBinarySearchTree;
@@ -48,7 +49,7 @@ public class Answers {
 //            System.out.println("false");
 
 
-        System.out.println(new LongestIncreasingSubsequence().lengthOfLIS(new int[] {10,9,2,5,3,7,101,18}));
+        System.out.println(new Candy().candy(new int[] {4,2,3,4,1}));
 
     }
 }

@@ -17,6 +17,7 @@ import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
 import LengthOfLastWord.LengthOfLastWord;
 import LongestCommonPrefix.LongestCommonPrefix;
+import LongestIncreasingSubsequence.LongestIncreasingSubsequence;
 import MaximumSubarray.MaximumSubarray;
 import PascalsTriangle.PascalsTriangle;
 import PathSumII.PathSumII;
@@ -46,7 +47,8 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new SumOfTwoInteger().getSum(2147483647,-2147483648));
+
+        System.out.println(new LongestIncreasingSubsequence().lengthOfLIS(new int[] {10,9,2,5,3,7,101,18}));
 
     }
 }

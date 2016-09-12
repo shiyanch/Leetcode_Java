@@ -50,7 +50,7 @@ public class Answers {
 //            System.out.println("false");
 
 
-        System.out.println(new LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstring("dvdf"));
+        System.out.println();
 
     }
 }

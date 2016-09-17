@@ -18,6 +18,7 @@ import IntegerBreak.IntegerBreak;
 import IntegerToRoman.IntegerToRoman;
 import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
+import LargestDivisibleSubset.LargestDivisibleSubset;
 import LengthOfLastWord.LengthOfLastWord;
 import LongestCommonPrefix.LongestCommonPrefix;
 import LongestIncreasingSubsequence.LongestIncreasingSubsequence;
@@ -53,15 +54,6 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new PerfectSquares().numSquares(1));
-        System.out.println(new PerfectSquares().numSquares(2));
-        System.out.println(new PerfectSquares().numSquares(3));
-        System.out.println(new PerfectSquares().numSquares(4));
-        System.out.println(new PerfectSquares().numSquares(12));
-        System.out.println(new PerfectSquares().numSquares(13));
-
-
-
-
+        System.out.println(new LargestDivisibleSubset().largestDivisibleSubset(new int[] {1,2,4,8,9,72}));
     }
 }

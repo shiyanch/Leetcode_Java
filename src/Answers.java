@@ -40,6 +40,7 @@ import SumRootToLeafNumbers.SumRootToLeafNumbers;
 import SuperUglyNumber.SuperUglyNumber;
 import TwoSumII.TwoSumII;
 import UglyNumberII.UglyNumberII;
+import UniquePaths.UniquePaths;
 import WiggleSortII.WiggleSortII;
 
 
@@ -51,15 +52,9 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
+        System.out.println(new UniquePaths().uniquePaths(3,7));
 
 
-        System.out.println(new IntegerBreak().integerBreak(2));
-        System.out.println(new IntegerBreak().integerBreak(3));
-        System.out.println(new IntegerBreak().integerBreak(4));
-        System.out.println(new IntegerBreak().integerBreak(7));
-        System.out.println(new IntegerBreak().integerBreak(8));
-        System.out.println(new IntegerBreak().integerBreak(9));
-        System.out.println(new IntegerBreak().integerBreak(10));
 
 
     }

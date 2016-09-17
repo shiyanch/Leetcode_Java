@@ -1,49 +1,8 @@
-import AddBinary.AddBinary;
-import BinaryTreeRightSideView.BinaryTreeRightSideView;
-import Candy.Candy;
-import CoinChange.CoinChange;
-import ConstructBinaryTreeFromInorderAndPreorderTraversal.ConstructBinaryTreeFromInorderAndPostorderTraversal;
-import ConstructBinaryTreeFromPreorderAndInorderTraversal.ConstructBinaryTreeFromPreorderAndInorderTraversal;
-import ConvertSortedListToBinarySearchTree.ConvertSortedListToBinarySearchTree;
-import CountAndSay.CountAndSay;
-import CountCompleteTreeNodes.CountCompleteTreeNodes;
-import CountPrimes.CountPrime;
-import ExcelSheetColumnTitle.ExcelSheetColumnTitle;
-import FindMedianFromDataStream.FindMedianFromDataStream;
-import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
-import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
-import FourSum.FourSum;
-import GenerateParentheses.GenerateParentheses;
-import IntegerBreak.IntegerBreak;
-import IntegerToRoman.IntegerToRoman;
-import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
-import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
 import LargestDivisibleSubset.LargestDivisibleSubset;
-import LengthOfLastWord.LengthOfLastWord;
-import LongestCommonPrefix.LongestCommonPrefix;
-import LongestIncreasingSubsequence.LongestIncreasingSubsequence;
-import LongestSubstringWithoutRepeatingCharacters.LongestSubstringWithoutRepeatingCharacters;
-import MaximumSubarray.MaximumSubarray;
-import PascalsTriangle.PascalsTriangle;
-import PathSumII.PathSumII;
-import PerfectSquares.PerfectSquares;
-import PlusOne.PlusOne;
-import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
-import RecoverBinarySearchTree.RecoverBinarySearchTree;
-import RemoveDuplicatesFromSortedArrayII.RemoveDuplicatesFromSortedArrayII;
-import ReverseInteger.ReverseInteger;
-import RomanToInteger.RomanToInteger;
-import SerializeAndDeserializeBinaryTree.SerializeAndDeserializeBinaryTree;
-import SingleNumberIII.SingleNumberIII;
-import SlidingWindowMaximum.SlidingWindowMaximum;
-import Subsets.Subsets;
-import SumOfTwoInteger.SumOfTwoInteger;
-import SumRootToLeafNumbers.SumRootToLeafNumbers;
-import SuperUglyNumber.SuperUglyNumber;
-import TwoSumII.TwoSumII;
-import UglyNumberII.UglyNumberII;
-import UniquePaths.UniquePaths;
-import WiggleSortII.WiggleSortII;
+import Triangle.Triangle;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Answers {
@@ -54,6 +13,19 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new LargestDivisibleSubset().largestDivisibleSubset(new int[] {1,2,4,8,9,72}));
+        List<List<Integer>> arg = new ArrayList<>();
+
+        List<Integer> inner1 = new ArrayList<>();
+        inner1.add(-10);
+
+        List<Integer> inner2 = new ArrayList<>();
+        inner2.add(-2);
+        inner2.add(-3);
+
+        arg.add(inner1);
+        arg.add(inner2);
+
+        System.out.println(new Triangle().minimumTotal(arg));
+
     }
 }

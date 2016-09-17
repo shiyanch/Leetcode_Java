@@ -25,6 +25,7 @@ import LongestSubstringWithoutRepeatingCharacters.LongestSubstringWithoutRepeati
 import MaximumSubarray.MaximumSubarray;
 import PascalsTriangle.PascalsTriangle;
 import PathSumII.PathSumII;
+import PerfectSquares.PerfectSquares;
 import PlusOne.PlusOne;
 import PopulatingNextRightPointersInEachNodeII.PopulatingNextRightPointersInEachNodeII;
 import RecoverBinarySearchTree.RecoverBinarySearchTree;
@@ -52,7 +53,12 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new UniquePaths().uniquePaths(3,7));
+        System.out.println(new PerfectSquares().numSquares(1));
+        System.out.println(new PerfectSquares().numSquares(2));
+        System.out.println(new PerfectSquares().numSquares(3));
+        System.out.println(new PerfectSquares().numSquares(4));
+        System.out.println(new PerfectSquares().numSquares(12));
+        System.out.println(new PerfectSquares().numSquares(13));
 
 
 

@@ -1,6 +1,7 @@
 import AddBinary.AddBinary;
 import BinaryTreeRightSideView.BinaryTreeRightSideView;
 import Candy.Candy;
+import CoinChange.CoinChange;
 import ConstructBinaryTreeFromInorderAndPreorderTraversal.ConstructBinaryTreeFromInorderAndPostorderTraversal;
 import ConstructBinaryTreeFromPreorderAndInorderTraversal.ConstructBinaryTreeFromPreorderAndInorderTraversal;
 import ConvertSortedListToBinarySearchTree.ConvertSortedListToBinarySearchTree;
@@ -13,6 +14,7 @@ import FindMinimumInRotatedSortedArray.FindMinimumInRotatedSortedArray;
 import FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList;
 import FourSum.FourSum;
 import GenerateParentheses.GenerateParentheses;
+import IntegerBreak.IntegerBreak;
 import IntegerToRoman.IntegerToRoman;
 import IntersectionOfTwoArrays.IntersectionOfTwoArrays;
 import IntersectionOfTwoArraysII.IntersectionOfTwoArraysII;
@@ -50,7 +52,15 @@ public class Answers {
 //            System.out.println("false");
 
 
-        System.out.println();
+
+        System.out.println(new IntegerBreak().integerBreak(2));
+        System.out.println(new IntegerBreak().integerBreak(3));
+        System.out.println(new IntegerBreak().integerBreak(4));
+        System.out.println(new IntegerBreak().integerBreak(7));
+        System.out.println(new IntegerBreak().integerBreak(8));
+        System.out.println(new IntegerBreak().integerBreak(9));
+        System.out.println(new IntegerBreak().integerBreak(10));
+
 
     }
 }

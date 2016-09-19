@@ -1,7 +1,5 @@
 package FirstUniqueCharcterInAString;
 
-import java.util.HashMap;
-
 /**
  * 387. First Unique Character in a String
  *

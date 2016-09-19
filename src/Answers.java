@@ -1,3 +1,4 @@
+import BullsAndCows.BullsAndCows;
 import LargestDivisibleSubset.LargestDivisibleSubset;
 import Triangle.Triangle;
 
@@ -13,19 +14,8 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        List<List<Integer>> arg = new ArrayList<>();
 
-        List<Integer> inner1 = new ArrayList<>();
-        inner1.add(-10);
-
-        List<Integer> inner2 = new ArrayList<>();
-        inner2.add(-2);
-        inner2.add(-3);
-
-        arg.add(inner1);
-        arg.add(inner2);
-
-        System.out.println(new Triangle().minimumTotal(arg));
+        System.out.println(new BullsAndCows().getHint("0","1"));
 
     }
 }

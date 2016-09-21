@@ -1,6 +1,7 @@
 import BullsAndCows.BullsAndCows;
 import LargestDivisibleSubset.LargestDivisibleSubset;
 import NthDigit.NthDigit;
+import RepeatedDNASequences.RepeatedDNASequences;
 import Triangle.Triangle;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class Answers {
 //            System.out.println("false");
 
 
-        System.out.println(new NthDigit().findNthDigit(3));
+        System.out.println(new RepeatedDNASequences().findRepeatedDnaSequences("ACACACACACACTTT"));
 
     }
 }

@@ -1,5 +1,7 @@
 package AddBinary;
 
+import java.math.BigDecimal;
+
 /**
  * 67. Add Binary
  *

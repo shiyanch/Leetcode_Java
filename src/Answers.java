@@ -1,5 +1,6 @@
 import BullsAndCows.BullsAndCows;
 import LargestDivisibleSubset.LargestDivisibleSubset;
+import NthDigit.NthDigit;
 import Triangle.Triangle;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ public class Answers {
 //            System.out.println("false");
 
 
-        System.out.println(new BullsAndCows().getHint("0","1"));
+        System.out.println(new NthDigit().findNthDigit(3));
 
     }
 }

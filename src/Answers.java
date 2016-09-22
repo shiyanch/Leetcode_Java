@@ -3,6 +3,7 @@ import LargestDivisibleSubset.LargestDivisibleSubset;
 import NthDigit.NthDigit;
 import RepeatedDNASequences.RepeatedDNASequences;
 import Triangle.Triangle;
+import ValidPerfectSquare.ValidPerfectSquare;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ public class Answers {
 //            System.out.println("false");
 
 
-        System.out.println(new RepeatedDNASequences().findRepeatedDnaSequences("ACACACACACACTTT"));
+        System.out.println(new ValidPerfectSquare().isPerfectSquare(2147483647));
 
     }
 }

@@ -1,4 +1,5 @@
 import BullsAndCows.BullsAndCows;
+import DifferentWaysToAddParentheses.DifferentWaysToAddParentheses;
 import LargestDivisibleSubset.LargestDivisibleSubset;
 import NthDigit.NthDigit;
 import RepeatedDNASequences.RepeatedDNASequences;
@@ -17,8 +18,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-
-        System.out.println(new ValidPerfectSquare().isPerfectSquare(2147483647));
+        System.out.println(new DifferentWaysToAddParentheses().diffWaysToCompute("1+2+3"));
 
     }
 }

@@ -15,6 +15,8 @@ import java.util.regex.Matcher;
  * were broken into on the same night.
  *
  * Determine the maximum amount of money the thief can rob tonight without alerting the police.
+ *
+ * https://discuss.leetcode.com/topic/39834/step-by-step-tackling-of-the-problem/14
  */
 public class HouseRobberIII {
 

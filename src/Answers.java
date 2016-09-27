@@ -2,6 +2,7 @@ import BullsAndCows.BullsAndCows;
 import DifferentWaysToAddParentheses.DifferentWaysToAddParentheses;
 import LargestDivisibleSubset.LargestDivisibleSubset;
 import NthDigit.NthDigit;
+import QueueReconstructionByHeight.QueueReconstructionByHeight;
 import RepeatedDNASequences.RepeatedDNASequences;
 import SumOfLeftLeaves.SumOfLeftLeaves;
 import Triangle.Triangle;
@@ -19,7 +20,14 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-
+        new QueueReconstructionByHeight().reconstructQueue(new int[][] {
+                new int[] {1,0},
+                new int[] {2,0},
+//                new int[] {7,1},
+//                new int[] {5,0},
+//                new int[] {6,1},
+//                new int[] {5,2}
+        });
 
     }
 }

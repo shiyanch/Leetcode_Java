@@ -5,6 +5,7 @@ import NthDigit.NthDigit;
 import QueueReconstructionByHeight.QueueReconstructionByHeight;
 import RepeatedDNASequences.RepeatedDNASequences;
 import SumOfLeftLeaves.SumOfLeftLeaves;
+import ThreeSumClosest.ThreeSumClosest;
 import Triangle.Triangle;
 import ValidPerfectSquare.ValidPerfectSquare;
 
@@ -20,14 +21,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        new QueueReconstructionByHeight().reconstructQueue(new int[][] {
-                new int[] {1,0},
-                new int[] {2,0},
-//                new int[] {7,1},
-//                new int[] {5,0},
-//                new int[] {6,1},
-//                new int[] {5,2}
-        });
+        System.out.println(new ThreeSumClosest().threeSumClosest(new int[] {-3,-2,-5,3,-4}, -1));
 
     }
 }

@@ -3,6 +3,7 @@ import DifferentWaysToAddParentheses.DifferentWaysToAddParentheses;
 import LargestDivisibleSubset.LargestDivisibleSubset;
 import NthDigit.NthDigit;
 import RepeatedDNASequences.RepeatedDNASequences;
+import SumOfLeftLeaves.SumOfLeftLeaves;
 import Triangle.Triangle;
 import ValidPerfectSquare.ValidPerfectSquare;
 
@@ -18,7 +19,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new DifferentWaysToAddParentheses().diffWaysToCompute("1+2+3"));
+
 
     }
 }

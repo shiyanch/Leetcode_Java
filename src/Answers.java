@@ -2,6 +2,7 @@ import BullsAndCows.BullsAndCows;
 import CompareVersionNumbers.CompareVersionNumbers;
 import DifferentWaysToAddParentheses.DifferentWaysToAddParentheses;
 import LargestDivisibleSubset.LargestDivisibleSubset;
+import MedianOfTwoSortedArrays.MedianOfTwoSortedArrays;
 import NthDigit.NthDigit;
 import QueueReconstructionByHeight.QueueReconstructionByHeight;
 import RepeatedDNASequences.RepeatedDNASequences;
@@ -22,9 +23,9 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        String a = "19.8.3.17.5.01.0.0.4.0.0.0.0.0.0.0.0.0.0.0.0.0.00.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.000000.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.000000";
-        String b = "19.8.3.17.5.01.0.0.4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0000.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.000000";
-        System.out.println(new CompareVersionNumbers().compareVersion(a,b));
+        System.out.println(new MedianOfTwoSortedArrays().findMedianSortedArrays(
+                new int[] {2}, new int[] {1,3,4,5,6}
+        ));
 
     }
 }

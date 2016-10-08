@@ -1,4 +1,5 @@
 import BullsAndCows.BullsAndCows;
+import CombinationSum.CombinationSum;
 import CompareVersionNumbers.CompareVersionNumbers;
 import DifferentWaysToAddParentheses.DifferentWaysToAddParentheses;
 import LargestDivisibleSubset.LargestDivisibleSubset;
@@ -23,7 +24,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new NthDigit().findNthDigit(12));
+        System.out.println(new CombinationSum().combinationSum(new int[] {2,3,6,7}, 7));
 
     }
 }

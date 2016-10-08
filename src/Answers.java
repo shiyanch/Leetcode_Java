@@ -23,9 +23,7 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new MedianOfTwoSortedArrays().findMedianSortedArrays(
-                new int[] {2}, new int[] {1,3,4,5,6}
-        ));
+        System.out.println(new NthDigit().findNthDigit(12));
 
     }
 }

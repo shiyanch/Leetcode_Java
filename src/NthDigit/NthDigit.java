@@ -11,16 +11,18 @@ package NthDigit;
 public class NthDigit {
     public int findNthDigit(int n) {
         int len = 1;
-        int count = 9;
+        long count = 9;
+        int start = 1;
 
-        while(n > len*count) {
-            n -= len*count;
-            len++;
-            count*=10;
+        while (n > len * count) {
+            n -= len * count;
+            len += 1;
+            count *= 10;
+            start *= 10;
         }
 
-        count = count/9 + (n-1)/len;
-        String s = Integer.toString(count);
-        return Character.getNumericValue(s.charAt((n-1)%len));
+        start += (n - 1) / len;
+        String s = Integer.toString(start);
+        return Character.getNumericValue(s.charAt((n - 1) % len));
     }
 }

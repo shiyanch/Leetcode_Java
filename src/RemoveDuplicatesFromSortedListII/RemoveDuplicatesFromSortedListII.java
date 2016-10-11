@@ -25,40 +25,23 @@ public class RemoveDuplicatesFromSortedListII {
         if(head == null || head.next == null)
             return head;
 
-        ListNode helper = new ListNode(0);
-        helper.next = head;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
 
-        ListNode pre = helper;
-        ListNode current = helper.next;
-
-        boolean hasDuplicated = false;
-
-        while(current.next != null) {
-            if(current.val == current.next.val) {
-                // contains duplicates, set the tag and move on
-                hasDuplicated = true;
+        ListNode cur = head;
+        ListNode last = dummy;
+        while(cur != null) {
+            while(cur.next != null && cur.val == cur.next.val)
+                cur = cur.next;
+            if(last.next != cur) {
+                last.next = cur.next;
             }
             else {
-                if(hasDuplicated)
-                    // drop nodes from pre.next to current
-                    // so link pre node to current.next node
-                    pre.next = current.next;
-                else
-                    // reserver current node, move pre to current
-                    pre = current;
-
-                // handled duplicates, clear the tag
-                hasDuplicated = false;
+                last = cur;
             }
-            current = current.next;
-
+            cur = cur.next;
         }
 
-        // if duplicates unhandled
-        // drop nodes from pre.next to current
-        if(hasDuplicated)
-            pre.next = current.next;
-
-        return helper.next;
+        return dummy.next;
     }
 }

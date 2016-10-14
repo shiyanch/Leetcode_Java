@@ -15,7 +15,7 @@ public class AddAndSearchWord {
 
     class TrieNode {
         private TrieNode[] children;
-        private boolean endHere = false;
+        private boolean endHere = false; // This is important!
 
         public void insert(char c) {
             if(children == null)

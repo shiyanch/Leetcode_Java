@@ -1,3 +1,5 @@
+package ZigZagConversion;
+
 /**
  * 6. ZigZag Conversion
  *

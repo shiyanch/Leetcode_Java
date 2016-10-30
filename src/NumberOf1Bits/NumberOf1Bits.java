@@ -17,4 +17,9 @@ public class NumberOf1Bits {
         }
         return sum;
     }
+
+    public static void main(String[] args) {
+        long num = 2147483648L;
+        System.out.println(new NumberOf1Bits().hammingWeight((int)num));
+    }
 }

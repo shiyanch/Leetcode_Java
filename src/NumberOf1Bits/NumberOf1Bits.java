@@ -21,5 +21,13 @@ public class NumberOf1Bits {
     public static void main(String[] args) {
         long num = 2147483648L;
         System.out.println(new NumberOf1Bits().hammingWeight((int)num));
+        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
+        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
+        System.out.println(Integer.toBinaryString(-1));
+        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE-1));
+        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE+1));
+        System.out.println(Integer.toBinaryString(0));
+        System.out.println(Integer.toBinaryString(-0));
+
     }
 }

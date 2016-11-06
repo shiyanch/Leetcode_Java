@@ -22,21 +22,25 @@ import java.util.Map;
  * You may assume the interval's end point is always bigger than its start point.
  * You may assume none of these intervals have the same start point.
  */
-public class FindRightInterval {
-    static class Interval {
-        int start;
-        int end;
 
-        Interval() {
-            start = 0;
-            end = 0;
-        }
+class Interval {
+    int start;
+    int end;
 
-        Interval(int s, int e) {
-            start = s;
-            end = e;
-        }
+    Interval() {
+        start = 0;
+        end = 0;
     }
+
+    Interval(int s, int e) {
+        start = s;
+        end = e;
+    }
+}
+
+
+public class FindRightInterval {
+
 
     public int[] findRightInterval(Interval[] intervals) {
         int[] result = new int[intervals.length];
@@ -45,9 +49,9 @@ public class FindRightInterval {
             map.put(intervals[i].start, i);
         }
 
-        Arrays.sort(intervals, new Comparator<FindRightInterval.Interval>() {
+        Arrays.sort(intervals, new Comparator<Interval>() {
             @Override
-            public int compare(FindRightInterval.Interval o1, FindRightInterval.Interval o2) {
+            public int compare(Interval o1, Interval o2) {
                 return o1.start - o2.start;
             }
         });

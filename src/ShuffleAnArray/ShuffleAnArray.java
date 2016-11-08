@@ -6,6 +6,7 @@ import java.util.Random;
  * 384. Shuffle an Array
  *
  * Shuffle a set of numbers without duplicates.
+ * https://discuss.leetcode.com/topic/53978/first-accepted-solution-java/11
  */
 public class ShuffleAnArray {
     private int[] nums;
@@ -18,6 +19,11 @@ public class ShuffleAnArray {
 
     /** Resets the array to its original configuration and return it. */
     public int[] reset() {
+        return nums;
+    }
+
+    /** Returns a random shuffling of the array. */
+    public int[] shuffle() {
         if(nums == null) return null;
         int[] a = nums.clone();
         for(int j = 1; j < a.length; j++) {
@@ -25,11 +31,6 @@ public class ShuffleAnArray {
             swap(a, i, j);
         }
         return a;
-    }
-
-    /** Returns a random shuffling of the array. */
-    public int[] shuffle() {
-        return nums;
     }
 
     private void swap(int[] a, int i, int j) {

@@ -24,7 +24,9 @@ public class Answers {
 //        else
 //            System.out.println("false");
 
-        System.out.println(new CombinationSum().combinationSum(new int[] {2,3,6,7}, 7));
+        char[] c = {'a','b','c'};
+        System.out.println(c.toString());
+        System.out.println(String.valueOf(c));
 
     }
 }

@@ -10,6 +10,7 @@ package IncreasingTripletSubsequence;
  */
 public class IncreasingTripletSubsequence {
 
+    // 1 ms
     public boolean increasingTriplet(int[] nums) {
         int small = Integer.MAX_VALUE;
         int big = Integer.MAX_VALUE;

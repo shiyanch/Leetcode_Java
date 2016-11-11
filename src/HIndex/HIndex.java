@@ -45,8 +45,29 @@ public class HIndex {
         return 0;
     }
 
-    // 3ms
     public int hIndex_2(int[] citations) {
+        Arrays.sort(citations);
+        int left = 0;
+        int right = citations.length-1;
+
+        int last = 0;
+        while (left <= right) {
+            int mid = (right - left)/2 + left;
+            if(citations[mid] >= citations.length - mid) {
+                right = mid-1;
+                last = mid;
+            }
+            else {
+                left = mid+1;
+            }
+        }
+
+        // in case of [0] and [0,0,...,0]
+        return (citations[last] == 0)?0:citations.length - last;
+    }
+
+    // 3ms
+    public int hIndex_3(int[] citations) {
         Arrays.sort(citations);
         int count = 0;
         for(int i=citations.length-1;i>=0;i--) {

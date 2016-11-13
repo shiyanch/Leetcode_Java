@@ -18,6 +18,7 @@ import java.util.*;
 public class MinimumHeightTrees {
 
     // Cut leaves
+    // https://discuss.leetcode.com/topic/30572/share-some-thoughts
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
         if(n == 1)
             return Collections.singletonList(0);

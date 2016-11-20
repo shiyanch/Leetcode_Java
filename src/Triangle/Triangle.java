@@ -50,4 +50,34 @@ public class Triangle {
 
         return min;
     }
+
+    public int minimumTotal2(int[][] triangle) {
+        int[] dp = new int[triangle.length];
+        dp[0] = triangle[0][0];
+        int min = dp[0];
+        for (int i = 1; i < triangle.length; i++) {
+            int[] tmp = new int[triangle.length];
+            for (int j = 0; j < i+1; j++) {
+                if (j == 0) {
+                    tmp[j] = dp[0] + triangle[i][j];
+                }
+                else if (j == i) {
+                    tmp[j] = dp[j-1] + triangle[i][j];
+                }
+                else {
+                    tmp[j] = Math.min(dp[j-1], dp[j]) + triangle[i][j];
+                }
+                if (i == triangle.length - 1) {
+                    min = (j == 0)?tmp[0]:Math.min(min, tmp[j]);
+                }
+            }
+            dp = tmp;
+        }
+        return min;
+    }
+
+    public static void main(String[] args) {
+        int[][] arr = {{2}, {3,4}, {6,5,7}, {4,1,8,3}};
+        System.out.println(new Triangle().minimumTotal2(arr));
+    }
 }

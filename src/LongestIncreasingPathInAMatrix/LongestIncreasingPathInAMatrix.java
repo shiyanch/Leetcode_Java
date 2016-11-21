@@ -9,6 +9,7 @@ package LongestIncreasingPathInAMatrix;
  * (i.e. wrap-around is not allowed).
  */
 public class LongestIncreasingPathInAMatrix {
+    // Recommended Methods to handle directions
     public static final int[][] dirs = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
     public int longestIncreasingPath(int[][] matrix) {
         if (matrix.length == 0) {

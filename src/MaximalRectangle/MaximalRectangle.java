@@ -17,6 +17,7 @@ import java.util.Arrays;
  * Return 6.
  */
 public class MaximalRectangle {
+    // 每次更新left，right，height，将矩形范围进行缩小
     public int maximalRectangle(char[][] matrix) {
         if (matrix.length == 0) {
             return 0;

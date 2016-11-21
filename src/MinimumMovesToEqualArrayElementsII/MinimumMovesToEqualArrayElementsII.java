@@ -12,12 +12,14 @@ import java.util.Arrays;
  */
 public class MinimumMovesToEqualArrayElementsII {
     public int minMoves2(int[] nums) {
+        if (nums.length < 2) {
+            return 0;
+        }
         Arrays.sort(nums);
+        int median = (nums.length % 2 == 0)?(nums[nums.length/2-1]+nums[nums.length/2])/2:nums[nums.length/2];
         int sum = 0;
-        int i = 0;
-        int j = nums.length-1;
-        while(i < j) {
-            sum += (nums[j--]-nums[i++]);
+        for (int num : nums) {
+            sum += Math.abs(num-median);
         }
         return sum;
     }

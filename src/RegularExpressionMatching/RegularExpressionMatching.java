@@ -11,8 +11,15 @@ public class RegularExpressionMatching {
             return false;
         }
 
+        if(s == null || p == null) {
+            return false;
+        }
+
         boolean[][] dp = new boolean[s.length()+1][p.length()+1];
         dp[0][0] = true;
+
+        // "", "a*b*c*" --> true
+        // "a", "b*a" --> true (in line 51)
         for (int i=0; i<p.length(); i++) {
             if (p.charAt(i) == '*' && dp[0][i-1]) {
                 dp[0][i+1] = true;

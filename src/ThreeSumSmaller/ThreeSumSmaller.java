@@ -22,6 +22,9 @@ public class ThreeSumSmaller {
         Arrays.sort(nums);
         int count = 0;
         for (int i=0; i<nums.length-2; i++) {
+            if (nums[i]*3 >= target) {
+                break;
+            }
             int left = i+1;
             int right = nums.length-1;
             while(left < right) {

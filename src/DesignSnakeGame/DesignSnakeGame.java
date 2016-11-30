@@ -24,13 +24,13 @@ import java.util.Set;
 
 public class DesignSnakeGame {
     //2D position info is encoded to 1D and stored as two copies
-    Set<Integer> set; // this copy is good for fast loop-up for eating body case
-    Deque<Integer> body; // this copy is good for updating tail
-    int score;
-    int[][] food;
-    int foodIndex;
-    int width;
-    int height;
+    private final Set<Integer> set; // this copy is good for fast loop-up for eating body case
+    private final Deque<Integer> body; // this copy is good for updating tail
+    private int score;
+    private final int[][] food;
+    private int foodIndex;
+    private final int width;
+    private final int height;
     /** Initialize your data structure here.
      @param width - screen width
      @param height - screen height

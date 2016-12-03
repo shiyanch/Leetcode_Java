@@ -17,7 +17,7 @@ public class PalindromePartitioningII {
             return 0;
         }
 
-        boolean[][] pair = new boolean[s.length()+1][s.length()+1];
+        boolean[][] pair = new boolean[s.length()][s.length()];
         int[] cut = new int[s.length()+1];
         Arrays.fill(cut, Integer.MAX_VALUE);
         cut[0] = 0;

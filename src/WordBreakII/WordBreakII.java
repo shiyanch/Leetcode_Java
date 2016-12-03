@@ -49,6 +49,37 @@ public class WordBreakII {
         return false;
     }
 
+    // TLE !!
+    public List<String> wordBreak_dp(String s, Set<String> wordDict) {
+        List<String> result = new ArrayList<>();
+        Map<Integer, List<String>> map = new HashMap<>();
+        List<String> l = new ArrayList<String >();
+        l.add("");
+        map.put(s.length(), l);
+
+        for(int i=s.length()-1;i>=0;i--) {
+            List<String> tmp = new ArrayList<>();
+            for(int j=i+1;j<=s.length();j++) {
+                if(map.containsKey(j) && wordDict.contains(s.substring(i, j))) {
+                    for (String str : map.get(j)) {
+                        tmp.add(s.substring(i, j)+(str.isEmpty() ? "" : " ")+str);
+                    }
+                }
+            }
+            map.put(i, tmp);
+        }
+
+        return map.getOrDefault(0, new ArrayList<>());
+    }
+
+    private int getMaxLen(Set<String> wordDict) {
+        int max = 0;
+        for (String s : wordDict) {
+            max = Math.max(max, s.length());
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
         Set<String> wordDict = new HashSet<>();
         String s = "catsanddog";
@@ -58,6 +89,6 @@ public class WordBreakII {
         wordDict.add("sand");
         wordDict.add("dog");
 
-        System.out.println(new WordBreakII().wordBreak(s, wordDict).toString());
+        System.out.println(new WordBreakII().wordBreak_dp(s, wordDict).toString());
     }
 }

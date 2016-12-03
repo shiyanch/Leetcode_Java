@@ -46,4 +46,22 @@ public class Subsets {
 
         return res;
     }
+
+    public List<List<Integer>> subsets_backtracking(int[] nums) {
+        // Not necessarily to be sorted.
+        // Arrays.sort(nums);
+        List<List<Integer>> result = new ArrayList<>();
+        result.add(new ArrayList<Integer>());
+
+        for (int i=0; i<nums.length; i++) {
+            int size = result.size();
+            for (int j=0; j<size; j++) {
+                List<Integer> newList = new ArrayList<>(result.get(j));
+                newList.add(nums[i]);
+                result.add(newList);
+            }
+        }
+
+        return result;
+    }
 }

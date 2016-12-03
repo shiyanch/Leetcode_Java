@@ -1,9 +1,6 @@
 package PermutationsII;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 47. Permutations II
@@ -20,7 +17,35 @@ import java.util.Set;
  * ]
  */
 public class PermutationsII {
+
     public List<List<Integer>> permuteUnique(int[] nums) {
+        Arrays.sort(nums);
+        boolean[] visited = new boolean[nums.length];
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        backtracking(result, new ArrayList<Integer>(), nums, visited);
+        return result;
+    }
+
+    private void backtracking(List<List<Integer>> result, List<Integer> currList, int[] nums, boolean[] visited) {
+        if (currList.size() == nums.length) {
+            result.add(new ArrayList<Integer>(currList));
+            return;
+        }
+        for (int i = 0; i < visited.length; i++) {
+            if (!visited[i]) {
+                if (i > 0 && nums[i] == nums[i-1] && !visited[i-1]) {
+                    continue;
+                }
+                visited[i] = true;
+                currList.add(nums[i]);
+                backtracking(result, currList, nums, visited);
+                currList.remove(currList.size() - 1);
+                visited[i] = false;
+            }
+        }
+    }
+
+    public List<List<Integer>> permuteUnique_iterative(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         if(nums.length == 0) return ans;
 
@@ -44,5 +69,10 @@ public class PermutationsII {
             ans = new_ans;
         }
         return ans;
+    }
+
+    public static void main(String[] args) {
+        int[] num = {1,1,2};
+        System.out.println(new PermutationsII().permuteUnique(num));
     }
 }

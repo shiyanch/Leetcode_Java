@@ -20,7 +20,10 @@ public class CombinationSumIII {
     }
 
     private void dfs_helper(int k, int n, int start, List<List<Integer>> res, List<Integer> list) {
-        if(k == 0 && n == 0)
+        if (k < 0) {
+            return;
+        }
+        if (k == 0 && n == 0)
             res.add(new ArrayList<Integer>(list));
 
         for (int i = start; i < Math.min(10, n + 1); i++) {

@@ -1,6 +1,7 @@
 package MaximalRectangle;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 /**
  * 85. Maximal Rectangle
@@ -45,6 +46,37 @@ public class MaximalRectangle {
 
             for (int j=0;j<n;j++) {
                 max = Math.max(max, (right[j]-left[j])*height[j]);
+            }
+        }
+        return max;
+    }
+
+    public int maximalRectangle2(char[][] matrix) {
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+            return 0;
+        }
+
+        int clen = matrix[0].length;
+        int rlen = matrix.length;
+        int[] h = new int[clen+1];
+        h[clen] = 0;
+        int max = 0;
+
+        for (int row=0; row<rlen; row++) {
+            Stack<Integer> stack = new Stack<>();
+            for (int i=0; i<clen+1; i++) {
+                if (i < clen) {
+                    h[i] += (matrix[row][i] == '1')?1:-h[i];
+                }
+
+                if (!stack.isEmpty() && h[stack.peek()] > h[i]) {
+                    while (!stack.isEmpty() && h[i] < h[stack.peek()]) {
+                        int top = stack.pop();
+                        int area = h[top] * (stack.isEmpty()?i:(i-stack.peek()-1));
+                        max = Math.max(max, area);
+                    }
+                }
+                stack.push(i);
             }
         }
         return max;

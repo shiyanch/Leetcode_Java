@@ -1,6 +1,8 @@
 package WiggleSortII;
 
 /**
+ * 324. Wiggle Sort II
+ *
  * Given an unsorted array nums,
  * reorder it such that nums[0] < nums[1] > nums[2] < nums[3]....
  *
@@ -15,53 +17,50 @@ package WiggleSortII;
  */
 public class WiggleSortII {
     public void wiggleSort(int[] nums) {
-        if(nums.length <= 1)
-            return;
+        int n = nums.length;
+        int median = findKthLargest(nums, (n+1)/2);
+        int left=0, i=0, right=n-1;
 
-        for(int i=1;i<nums.length;i++) {
-            if(i%2 == 1) {
-                if(nums[i] < nums[i-1]) {
-                    swap(nums, i, i-1);
-                }
-                else if(nums[i] == nums[i-1]) {
-                    int j=0;
-                    while(j < i && nums[j]<=nums[i])
-                        j+=2;
-
-                    if(j<i)
-                        swap(nums, j, i);
-                    else {
-                        while(j<nums.length && nums[j]<=nums[i])
-                            j++;
-                        if(j<nums.length)
-                            swap(nums, j, i);
-                    }
-                }
+        while (i <= right) {
+            if (nums[newIndex(i,n)] > median) {
+                swap(nums, newIndex(left++, n), newIndex(i++, n));
+            }
+            else if (nums[newIndex(i,n)] < median) {
+                swap(nums, newIndex(right--, n), newIndex(i,n));
             }
             else {
-                if(nums[i] > nums[i-1]) {
-                    swap(nums, i, i-1);
-                }
-                else if(nums[i] == nums[i-1]) {
-                    int j=1;
-                    while(j<i && nums[j]>=nums[i])
-                        j+=2;
-
-                    if(j<i)
-                        swap(nums, j, i);
-                    else {
-                        while(j<nums.length && nums[j]>=nums[i])
-                            j++;
-                        if(j<nums.length)
-                            swap(nums, j, i);
-                    }
-                }
+                i++;
             }
         }
+    }
 
-        for(int i:nums)
-            System.out.print(i+" ");
-        System.out.println();
+    public int findKthLargest(int[] a, int k) {
+        int n = a.length;
+        int p = quickSelect(a, 0, n - 1, n - k + 1);
+        return a[p];
+    }
+
+    private int newIndex(int index, int n) {
+        return (1 + 2*index) % (n | 1);
+    }
+
+    private int quickSelect(int[] a, int low, int high, int k) {
+        int i = low, j = high, pivot = a[high];
+        while (i < j) {
+            if (a[i++] > pivot) swap(a, --i, --j);
+        }
+        swap(a, i, high);
+        int m = i - low + 1;
+
+        if (m == k) {
+            return i;
+        }
+        else if (m > k) {
+            return quickSelect(a, low, i - 1, k);
+        }
+        else {
+            return quickSelect(a, i + 1, high, k - m);
+        }
     }
 
     private void swap(int[] nums, int index1, int index2) {

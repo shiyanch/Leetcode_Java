@@ -59,7 +59,7 @@ public class SerializeAndDeserializeBinaryTree {
                 queue.add(cur.right);
             }
             else
-                res.append("n ");
+                res.append("null ");
         }
         return res.toString();
     }

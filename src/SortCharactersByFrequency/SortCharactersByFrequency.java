@@ -16,14 +16,17 @@ import java.util.Map;
 public class SortCharactersByFrequency {
     public String frequencySort(String s) {
         StringBuilder sb = new StringBuilder();
-        Map<Character, Integer> map = new HashMap<>();
+
+        int[] map = new int[256];
         for (char c : s.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0)+1);
+            map[c]++;
         }
 
         String[] records = new String[s.length()+1];
-        for (Character c : map.keySet()) {
-            records[map.get(c)] = (records[map.get(c)] == null?"":records[map.get(c)])+c;
+
+        for(int i = 0 ; i < 256; i++) { // join chars in the same bucket
+            if(map[i] > 0)
+                records[map[i]] = (records[map[i]] == null) ? "" + (char)i : (records[map[i]] + (char) i);
         }
 
         for (int i=s.length(); i>=0; i--) {

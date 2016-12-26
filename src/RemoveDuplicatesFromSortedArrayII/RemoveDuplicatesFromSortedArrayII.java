@@ -1,5 +1,7 @@
 package RemoveDuplicatesFromSortedArrayII;
 
+import java.util.Arrays;
+
 /**
  * 80. Remove Duplicates from Sorted Array II
  *
@@ -13,7 +15,17 @@ package RemoveDuplicatesFromSortedArrayII;
  * It doesn't matter what you leave beyond the new length.
  */
 public class RemoveDuplicatesFromSortedArrayII {
+    // O(n)
     public int removeDuplicates(int[] nums) {
+        int i = 0;
+        for (int n : nums)
+            if (i < 2 || n > nums[i-2])
+                nums[i++] = n;
+        return i;
+    }
+
+    // O(n2)
+    public int removeDuplicates_2(int[] nums) {
         int l=0,r=nums.length-1;
         int count=0;
 

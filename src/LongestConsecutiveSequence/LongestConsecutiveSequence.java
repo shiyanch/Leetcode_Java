@@ -41,4 +41,8 @@ public class LongestConsecutiveSequence {
         }
         return res;
     }
+
+    public static void main(String[] args) {
+        System.out.println(new LongestConsecutiveSequence().longestConsecutive(new int[] {1,2,4,3,0}));
+    }
 }

@@ -22,8 +22,11 @@ public class LongestAbsoluteFilePath {
 
             int len = segment.replace("\t","").length()+1;
             curLen += len;
-            if(segment.contains("."))
-                max = Math.max(max, curLen-1);
+            if(segment.contains(".")) {
+                max = Math.max(max, curLen - 1);
+                curLen -= len;
+                continue;
+            }
 
             path.push(len);
         }
@@ -37,9 +40,9 @@ public class LongestAbsoluteFilePath {
     }
 
     public static void main(String[] args) {
-        System.out.println(new LongestAbsoluteFilePath().lengthLongestPath("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"));
+//        System.out.println(new LongestAbsoluteFilePath().lengthLongestPath("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"));
 //        System.out.println(new LongestAbsoluteFilePath().lengthLongestPath("\t\t\t\thehe.txt"));
-//        System.out.println(new LongestAbsoluteFilePath().lengthLongestPath("a\nbb\ncc\nddd\n\t1.t"));
+        System.out.println(new LongestAbsoluteFilePath().lengthLongestPath("dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"));
 
     }
 }

@@ -58,7 +58,7 @@ public class NumberOfIslandsII {
     }
 
     public static void main(String[] args) {
-        int[][] positions = {{0,0},{0,1},{1,2},{2,1}};
+        int[][] positions = {{0,1},{1,2},{2,1},{1,0},{0,2},{0,0},{1,1}};
         System.out.println(new NumberOfIslandsII().numIslands2(3,3, positions));
     }
 }

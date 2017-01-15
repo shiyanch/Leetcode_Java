@@ -51,6 +51,46 @@ public class SplitArrayLargestSum {
         return min;
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public int splitArray_2(int[] nums, int m) {
+        long sum = 0;
+        int max = 0;
+        for (int num : nums) {
+            max = Math.max(max, num);
+            sum += num;
+        }
+        return (int)binary(nums, m, sum, max);
+    }
+
+    private long binary(int[] nums, int m, long high, long low) {
+        long mid = 0;
+        while (low < high) {
+            mid = (high-low)/2+low;
+            if (valid(nums, m, mid)) {
+                high = mid;
+            }
+            else {
+                low = mid+1;
+            }
+        }
+        return high;
+    }
+
+    private boolean valid(int[] nums, int m, long max) {
+        int cur = 0;
+        int count = 1;
+        for (int num : nums) {
+            cur += num;
+            if (cur > max) {
+                cur = num;
+                if (++count > m) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         System.out.println(new SplitArrayLargestSum().splitArray(new int[] {1, 2147483646}, 1));
     }

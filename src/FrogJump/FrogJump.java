@@ -28,43 +28,30 @@ import java.util.Set;
  */
 public class FrogJump {
     public boolean canCross(int[] stones) {
-        if(stones == null || stones.length == 0 || stones[0] != 0)
+        // 第一步只能从0跳1，因此stones[1]不为1则直接返回失败
+        if (stones == null || stones.length == 0 || stones[1] != 1) {
             return false;
-
+        }
+        int[] moves = {-1, 0, 1};
         Map<Integer, Set<Integer>> map = new HashMap<>();
-        for(int s: stones)
-            map.put(s, new HashSet<>());
-
-        for(int s: stones) {
-            Set<Integer> curSet = map.get(s);
-
-            if(s == 0) {
-                curSet.add(0);
-                if(map.containsKey(1))
-                    map.get(1).add(1);
-            }
-
-            for(int k : curSet) {
-                int nextK = k-1;
-                int nextStone = s + nextK;
-
-                // previous k-1
-                if(nextStone != s && map.containsKey(nextStone))
-                    map.get(nextStone).add(nextK);
-
-                // previous k
-                nextStone++;
-                nextK++;
-                if(nextStone != s && map.containsKey(nextStone))
-                    map.get(nextStone).add(nextK);
-
-                // previous k+1
-                nextStone++;
-                nextK++;
-                if(nextStone != s && map.containsKey(nextStone))
-                    map.get(nextStone).add(nextK);
+        for (int stone : stones) {
+            map.put(stone, new HashSet<Integer>());
+        }
+        map.get(1).add(1);
+        for (int i=1; i<stones.length; i++) {
+            for (int step : map.get(stones[i])) {
+                for (int move : moves) {
+                    int next = step + move + stones[i];
+                    if (next != stones[i] && map.containsKey(next)) {
+                        map.get(next).add(step+move);
+                    }
+                }
             }
         }
         return !map.get(stones[stones.length-1]).isEmpty();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new FrogJump().canCross(new int[] {0,1}));
     }
 }

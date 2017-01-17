@@ -1,6 +1,7 @@
 package InsertInterval;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,7 +20,7 @@ import java.util.List;
  */
 public class InsertInterval {
 
-    public class Interval {
+    public static class Interval {
         int start;
         int end;
         Interval() {
@@ -30,6 +31,10 @@ public class InsertInterval {
         Interval(int s, int e) {
             start = s;
             end = e;
+        }
+
+        public String toString() {
+            return "["+start+" "+end+"]";
         }
     }
 
@@ -45,5 +50,17 @@ public class InsertInterval {
 
         intervals.add(i, newInterval);
         return intervals;
+    }
+
+    public static void main(String[] args) {
+        List<Interval> intervals = new ArrayList<>();
+        intervals.add(new Interval(1,2));
+        intervals.add(new Interval(3,5));
+        intervals.add(new Interval(6,7));
+        intervals.add(new Interval(8,10));
+        intervals.add(new Interval(12,16));
+
+        Interval newInterval = new Interval(4,9);
+        System.out.println(new InsertInterval().insert(intervals, newInterval));
     }
 }

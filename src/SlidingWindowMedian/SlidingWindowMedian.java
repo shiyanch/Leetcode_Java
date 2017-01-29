@@ -22,6 +22,40 @@ import java.util.Queue;
  * Therefore, return the median sliding window as [1,-1,-1,3,5,6].
  */
 public class SlidingWindowMedian {
+    public double[] medianSlidingWindow2(int[] nums, int k) {
+        PriorityQueue<Long> larger = new PriorityQueue<>();
+        PriorityQueue<Long> smaller = new PriorityQueue<>();
+        double[] medians = new double[nums.length-k+1];
+
+        for (int i=0; i<nums.length; i++) {
+            if (i >= k) {
+                // 必须先转换为long类型，再进行remove，否则会删除不掉！！
+                if (nums[i-k] < larger.peek()) {
+                    smaller.remove(-(long)nums[i-k]);
+                }
+                else {
+                    larger.remove((long)nums[i-k]);
+                }
+            }
+            larger.offer((long)nums[i]);
+            smaller.offer(-larger.poll());
+            if (smaller.size() > larger.size()) {
+                larger.offer(-smaller.poll());
+            }
+            if (i >= k-1) {
+                medians[i-k+1] = getMedian(larger, smaller);
+            }
+        }
+        return medians;
+    }
+
+    private double getMedian(PriorityQueue<Long> larger, PriorityQueue<Long> smaller) {
+        if (larger.size() > smaller.size()) {
+            return larger.peek();
+        }
+        else return (larger.peek()-smaller.peek())/2.0;
+    }
+
     public double[] medianSlidingWindow(int[] nums, int k) {
         Queue<Long> maxHeap = new PriorityQueue<>();
         Queue<Long> minHeap = new PriorityQueue<>();
@@ -67,8 +101,10 @@ public class SlidingWindowMedian {
     }
 
     public static void main(String[] args) {
-        double[] ans = new SlidingWindowMedian().medianSlidingWindow(
+        double[] ans = new SlidingWindowMedian().medianSlidingWindow2(
                 new int[] {-2147483648,-2147483648,2147483647,-2147483648,-2147483648,-2147483648,2147483647,2147483647,2147483647,2147483647,-2147483648,2147483647,-2147483648}, 3);
+//        double[] ans = new SlidingWindowMedian().medianSlidingWindow2(
+//                new int[] {1,3,-1,-3,5,3,6,7}, 3);
         for (double n : ans) {
             System.out.print(n+" ");
         }

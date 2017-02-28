@@ -2,6 +2,7 @@ package MergeKSortedLists;
 
 /**
  * 23. Merge k Sorted Lists
+ *
  * Merge k sorted linked lists and return it as one sorted list.
  * Analyze and describe its complexity.
  */
@@ -45,5 +46,26 @@ public class MergeKSortedLists {
             list2.next = merge(list1, list2.next);
             return list2;
         }
+    }
+
+    private ListNode merge2(ListNode left, ListNode right) {
+        ListNode dummy = new ListNode(0);
+        ListNode tail = dummy;
+        while(left != null || right != null) {
+            long l = (left==null)?Long.MAX_VALUE:left.val;
+            long r = (right==null)?Long.MAX_VALUE:right.val;
+
+            if (l < r) {
+                tail.next = left;
+                left = left.next;
+            }
+            else {
+                tail.next = right;
+                right = right.next;
+            }
+            tail = tail.next;
+        }
+
+        return dummy.next;
     }
 }

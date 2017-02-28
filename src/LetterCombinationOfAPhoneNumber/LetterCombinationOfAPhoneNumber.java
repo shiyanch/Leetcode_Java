@@ -30,18 +30,18 @@ public class LetterCombinationOfAPhoneNumber {
         map.put(9, "wxyz");
 
         for(char c : digits.toCharArray()) {
-            List<String> newList = new ArrayList<>(result);
-            result.clear();
-            for (char nextChar : map.get(c - '0').toCharArray()) {
-                if (newList.size() == 0) {
-                    result.add(nextChar + "");
-                } else {
-                    for (String s : newList) {
-                        s += nextChar;
-                        result.add(s);
+            List<String> newList = new ArrayList<>();
+            for (char nextChar : map.get(c-'0').toCharArray()) {
+                if (result.size() == 0) {
+                    newList.add(nextChar+"");
+                }
+                else {
+                    for (String s:result) {
+                        newList.add(s+nextChar);
                     }
                 }
             }
+            result = newList;
         }
 
         return result;

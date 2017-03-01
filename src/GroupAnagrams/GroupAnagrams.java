@@ -16,22 +16,16 @@ import java.util.*;
  */
 public class GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
-        if(strs == null || strs.length == 0) {
-            return new ArrayList<List<String>>();
-        }
         Map<String, List<String>> map = new HashMap<>();
-
-        for(String str : strs) {
-            char[] tmp = str.toCharArray();
-            Arrays.sort(tmp);
-
-            String keyStr = String.valueOf(tmp);
-            if(!map.containsKey(keyStr)) {
-                map.put(keyStr, new ArrayList<String>());
+        for (String str : strs) {
+            char[] s = str.toCharArray();
+            Arrays.sort(s);
+            String key = new String(s);
+            if (!map.containsKey(key)) {
+                map.put(key, new ArrayList<String>());
             }
-            map.get(keyStr).add(str);
+            map.get(key).add(str);
         }
-
-        return new ArrayList<List<String>>(map.values());
+        return new ArrayList<>(map.values());
     }
 }

@@ -8,8 +8,7 @@ package DiameterOfBinaryTree;
  * This path may or may not pass through the root.
  */
 public class DiameterOfBinaryTree {
-
-    public static class TreeNode {
+    public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -32,7 +31,6 @@ public class DiameterOfBinaryTree {
 
         int left = recursiveDiameter(root.left);
         int right = recursiveDiameter(root.right);
-
         longest = Math.max(longest, left + right + 2);
 
         return Math.max(left, right) + 1;

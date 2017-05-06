@@ -1,4 +1,5 @@
 package ArrayPartitionI;
+import java.util.Arrays;
 
 /**
  * 561. Array Partition I

@@ -1,7 +1,5 @@
 package BinaryTreeTilt;
 
-import BinaryTreeUpsideDown.TreeNode;
-
 /**
  * 563. Binary Tree Tilt
  *

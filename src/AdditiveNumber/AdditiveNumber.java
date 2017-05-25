@@ -60,12 +60,12 @@ public class AdditiveNumber {
         }
 
         String sum;
-        Long x1 = Long.parseLong(num.substring(0, i));
-        Long x2 = Long.parseLong(num.substring(i, i+j));
+        long x1 = Long.parseLong(num.substring(0, i));
+        long x2 = Long.parseLong(num.substring(i, i+j));
         for (int start = i+j; start != num.length(); start += sum.length()) {
             x2 = x2+x1;
             x1 = x2-x1;
-            sum = x2.toString();
+            sum = x2 + "";
             if (!num.startsWith(sum, start)) {
                 return false;
             }

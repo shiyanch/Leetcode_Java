@@ -15,6 +15,10 @@ package OutOfBoundaryPaths;
  */
 public class OutOfBoundaryPaths {
     public int findPaths(int m, int n, int N, int i, int j) {
+        // The number of paths for N moves is the sum of paths for N - 1 moves from the adjacent cells.
+        // If an adjacent cell is out of the border, the number of paths is 1.
+        // We only need to look one step back.
+        // We can use N % 2 and (N + 1) % 2 to alternate grids so we do not have to copy.
         long[][][] grid = new long[2][m][n];
         while (N-- > 0) {
             for (int k=0; k<m; k++) {

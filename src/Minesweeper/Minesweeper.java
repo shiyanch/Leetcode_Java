@@ -63,7 +63,7 @@ public class Minesweeper {
                             if (r < 0 || r >= m || c < 0 || c < 0 || c >= n) continue;
                             if (board[r][c] == 'E') {
                                 queue.add(new int[]{r, c});
-                                board[r][c] = 'B'; // Avoid to be added again.
+                                board[r][c] = 'B'; // Avoid to be added into queue for multiple times.
                             }
                         }
                     }

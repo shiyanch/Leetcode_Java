@@ -17,24 +17,24 @@ import java.util.List;
  */
 public class FactorCombinations {
     public List<List<Integer>> getFactors(int n) {
-        List<List<Integer>> list = new ArrayList<>();
-        backtracking(list, new ArrayList<>(), 2, n);
-        return list;
+        List<List<Integer>> result = new ArrayList<>();
+        dfs(result, new ArrayList<Integer>(), n, 2);
+        return result;
     }
 
-    private void backtracking(List<List<Integer>> list, List<Integer> currList, int start, int number) {
-        int upperBound = Integer.MAX_VALUE;
-        for (int i=start; i<number && i<upperBound; i++) {
-            // 注意下界，每次除法结果不能低于下界，否则这样的组合之前已经生成过了
-            if (number % i == 0 && number/i >= start) {
-                currList.add(i);
-                currList.add(number/i);
-                list.add(new ArrayList<>(currList)); // 当前除得尽，是一对因子，保存进结果
-                currList.remove(currList.size()-1);
+    private void dfs(List<List<Integer>> result, List<Integer> list, int n, int start) {
+        if (n <= 1) {
+            if (list.size() > 1) {
+                result.add(new ArrayList<Integer>(list));
+            }
+            return;
+        }
 
-                upperBound = number / i;
-                backtracking(list, currList, i, number/i); // 当前i是一个因子，继续递归后续因子
-                currList.remove(currList.size()-1);
+        for (int i=start; i<=n; i++) {
+            if (n%i == 0) {
+                list.add(i);
+                dfs(result, list, n/i, i);
+                list.remove(list.size()-1);
             }
         }
     }
@@ -42,8 +42,7 @@ public class FactorCombinations {
     public static void main(String[] args) {
         System.out.println(new FactorCombinations().getFactors(37));
         System.out.println(new FactorCombinations().getFactors(12));
+        System.out.println(new FactorCombinations().getFactors(8));
         System.out.println(new FactorCombinations().getFactors(32));
-
-
     }
 }

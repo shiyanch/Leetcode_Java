@@ -13,25 +13,23 @@ package BeautifulArrangement;
  * Now given N, how many beautiful arrangements can you construct?
  */
 public class BeautifulArrangement {
-    private int count = 0;
     public int countArrangement(int N) {
-        count = 0;
-        helper(N, 1, new int[N+1]);
-        return count;
+        return dfs(N, 1, new boolean[N]);
     }
 
-    private void helper(int N, int pos, int[] used) {
-        if (pos > N) {
-            count++;
-            return;
+    private int dfs(int n, int i, boolean[] visited) {
+        if (i == n+1) {
+            return 1;
         }
 
-        for (int i=1; i<=N; i++) {
-            if (used[i] == 0 && (i%pos==0 || pos%i==0)) {
-                used[i] = 1;
-                helper(N, pos+1, used);
-                used[i] = 0;
+        int sum = 0;
+        for (int j=1; j<=n; j++) {
+            if (!visited[j-1] && (j%i == 0 || i%j == 0)) {
+                visited[j-1] = true;
+                sum += dfs(n, i+1, visited);
+                visited[j-1] = false;
             }
         }
+        return sum;
     }
 }

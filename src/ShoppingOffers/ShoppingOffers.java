@@ -19,4 +19,32 @@ package ShoppingOffers;
  * You could use any of special offers as many times as you want.
  */
 public class ShoppingOffers {
+    public int shoppingOffers(List<Integer> price, List<List<Integer>> special, List<Integer> needs) {
+        int result = Integer.MAX_VALUE;
+        for (List<Integer> offer: special) {
+            boolean invalid = false;
+            for (int i=0; i<needs.size(); i++) {
+                int remain = needs.get(i) - offer.get(i);
+                needs.set(i, remain);
+                // 必须保证needs全部走完，否则后面不好恢复
+                if (!invalid && remain < 0) {
+                    invalid = true;
+                }
+            }
+            if (!invalid) {
+                result = Math.min(result, shoppingOffers(price, special, needs) + offer.get(needs.size()));
+            }
+
+            for (int i=0; i<needs.size(); i++) {
+                needs.set(i, needs.get(i)+offer.get(i));
+            }
+        }
+
+        int noOfferPrice = 0;
+        for (int i=0; i<needs.size(); i++) {
+            noOfferPrice += price.get(i) * needs.get(i);
+        }
+
+        return Math.min(noOfferPrice, result);
+    }
 }

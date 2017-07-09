@@ -1,5 +1,7 @@
 package ShoppingOffers;
 
+import java.util.List;
+
 /**
  * 638. Shopping Offers
  *

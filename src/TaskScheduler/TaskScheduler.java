@@ -1,9 +1,6 @@
 package TaskScheduler;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * 621. Task Scheduler
@@ -25,6 +22,19 @@ import java.util.PriorityQueue;
  */
 public class TaskScheduler {
     public int leastInterval(char[] tasks, int n) {
+        int[] map = new int[26];
+        for (char c: tasks)
+            map[c - 'A']++;
+        Arrays.sort(map);
+        int max_val = map[25] - 1, idle_slots = max_val * n;
+        for (int i = 24; i >= 0 && map[i] > 0; i--) {
+            // 如果map[i]比max_val大，则会排到最后面，不影响idle的个数。因为idle只会插在前段
+            idle_slots -= Math.min(map[i], max_val);
+        }
+        return idle_slots > 0 ? idle_slots + tasks.length : tasks.length;
+    }
+
+    public int leastInterval_pq(char[] tasks, int n) {
         int[] map = new int[26];
         for (char task: tasks) {
             map[task-'A']++;

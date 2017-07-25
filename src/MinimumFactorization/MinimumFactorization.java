@@ -14,6 +14,8 @@ public class MinimumFactorization {
         }
         long res = 0, mul = 1;
         for (int i = 9; i > 1; i--) {
+            // 能除尽的时候一直除。
+            // 不会出现 当前能除尽但不取 的情况。
             while (a % i == 0) {
                 a /= i;
                 res = mul * i + res;

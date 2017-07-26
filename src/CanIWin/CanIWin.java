@@ -28,6 +28,7 @@ public class CanIWin {
         return canIWin(maxChoosableInteger, desiredTotal, 0, new HashMap <> ());
     }
 
+    // 当前层的state不能变，否则影响结果。
     private boolean canIWin(int length, int total, int state, HashMap <Integer, Boolean> hashMap) {
         if (hashMap.containsKey(state)) return hashMap.get(state);
         for (int i = 0; i < length; i++) {
@@ -90,7 +91,7 @@ public class CanIWin {
             if (!chossableIntegers.get(i)) {
                 chossableIntegers.set(i, true);
                 if (!canIWin(chossableIntegers, remain-i, cache)) {
-                    chossableIntegers.set(i, false);
+                    chossableIntegers.set(i, false);        // IMPORTANT 不能影响当前层的hashCode
                     cache.put(chossableIntegers.hashCode(), true);
                     return true;
                 }

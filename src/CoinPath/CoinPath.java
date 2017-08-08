@@ -25,6 +25,8 @@ import java.util.List;
  * If it's not possible to reach the place indexed N then you need to return an empty array.
  */
 public class CoinPath {
+    // If there are two path to reach n, and they have the same optimal cost,
+    // then the longer path is lexicographically smaller.
     public List<Integer> cheapestJump(int[] A, int B) {
         int n = A.length;
         int[] cost = new int[n];

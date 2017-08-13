@@ -4,6 +4,7 @@ import java.util.HashSet;
 
 /**
  * 202. Happy Number
+ *
  * Write an algorithm to determine if a number is "happy".
  * A happy number is a number defined by the following process:
  * Starting with any positive integer
@@ -26,68 +27,21 @@ public class HappyNumber {
     }
 
     private boolean recursive_happy(int curNum, int original) {
-        if(curNum == 1)
+        if (curNum == 1)
             return true;
 
         int res = 0;
         String newNum = Integer.toString(curNum);
-        for(int i=0;i<newNum.length();i++) {
-            int num = (int)(newNum.charAt(i) - '0');
-            res += num*num;
+        for (int i = 0; i < newNum.length(); i++) {
+            int num = (int) (newNum.charAt(i) - '0');
+            res += num * num;
         }
 
-        if(set.contains(res))
+        if (set.contains(res))
             return false;
         else {
             set.add(res);
             return recursive_happy(res, original);
         }
     }
-
-    public boolean isHappy2(int n) {
-        if(n<=0)
-            return false;
-
-        while (n>=10) {
-            n = cal(n);
-        }
-
-        return (n==1 || n == 7);
-    }
-
-    public boolean isHappy3(int n) {
-        if(n<=0)
-            return false;
-
-        while(n != 1 || !set.contains(n)) {
-            set.add(n);
-            n = cal(n);
-        }
-
-        return (n==1);
-    }
-
-    private int cal(int n) {
-        int sum = 0;
-
-        String newNum = Integer.toString(n);
-        for(int i=0;i<newNum.length();i++) {
-            int num = (int)(newNum.charAt(i) - '0');
-            sum += num*num;
-        }
-
-        return sum;
-    }
-
-    private int cal2(int n) {
-        int sum = 0;
-
-        while(n>0) {
-            sum += (n%10) * (n%10);
-            n /= 10;
-        }
-
-        return sum;
-    }
-
 }

@@ -28,10 +28,12 @@ public class SubstringWithConcatenationOfAllWords {
         for (String str : words) {
             map.put(str, map.getOrDefault(str, 0)+1);
         }
-        /*m is the length of each word in array words, each time get a substring of length m to check if it exits in words*/
+        /*m is the length of each word in array words,
+         each time get a substring of length m to check if it exits in words*/
         for (int i = 0; i <= s.length()-n*m; i++) {
             HashMap<String, Integer> copy = new HashMap(map);
-        	/*if it exits, use another hashset to avoid duplicate and count the number to reach n, the number of words in array words*/
+        	/*if it exits, use another hashset to avoid duplicate and count the number to reach n,
+        	 the number of words in array words*/
             int k = n, j = i;
             while (k > 0) {
                 String str = s.substring(j, j+m);

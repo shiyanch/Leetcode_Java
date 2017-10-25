@@ -15,8 +15,39 @@ import java.util.List;
 public class RestoreIPAddresses {
     public List<String> restoreIpAddresses(String s) {
         List<String> result = new ArrayList<>();
-        DFS(result, s, new String[3], 0, 4);
+//        DFS(result, s, new String[3], 0, 4);
+        backtrack(result, s, 0, "", 0);
         return result;
+    }
+
+    private void backtrack(List<String> list, String s, int index, String cur, int cnt) {
+        if (index == s.length()) {
+            if (cnt == 4) {
+                list.add(cur.substring(0, cur.length()-1));
+            }
+            return;
+        }
+
+        if (cnt > 3) {
+            return;
+        }
+
+        backtrack(list, s, index+1, cur+s.charAt(index)+".", cnt+1);
+
+        if (s.charAt(index) == '0') {
+            return;
+        }
+
+        if (index < s.length() - 1) {
+            backtrack(list, s, index+2, cur+s.substring(index, index+2)+".", cnt+1);
+        }
+
+        if (index < s.length() - 2) {
+            int part = Integer.parseInt(s.substring(index, index+3));
+            if (part < 256) {
+                backtrack(list, s, index+3, cur+part+".", cnt+1);
+            }
+        }
     }
 
     private void DFS(List<String> result,String s, String[] parts, int index, int toRestore) {
@@ -61,7 +92,8 @@ public class RestoreIPAddresses {
     }
 
     public static void main(String[] args) {
-        String ip = "010010";
+//        String ip = "010010";
+        String ip = "25500123";
         System.out.println(new RestoreIPAddresses().restoreIpAddresses(ip).toString());
     }
 }

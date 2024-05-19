@@ -1,6 +1,7 @@
 package Combinations;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -23,8 +24,10 @@ import java.util.List;
 public class Combinations {
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> result = new ArrayList<>();
-        backtracking(result, new ArrayList<Integer>(), 1, n, k);
+//        backtracking(result, new ArrayList<Integer>(), 1, n, k);
+        backtracking_bad(result, new ArrayList<>(), n, k, 1);
         return result;
+
     }
 
     private void backtracking(List<List<Integer>> result, List<Integer> currList, int index, int n, int k) {
@@ -33,18 +36,28 @@ public class Combinations {
             return;
         }
 
-        // bad code, consume much time!
-//        for(int i=index;i<=n;i++) {
-//            List<Integer> copy = new ArrayList<>(currList);
-//            copy.add(i);
-//            backtracking(result, copy, i+1, n, k);
-//        }
-
         for(int i=index;i<=n;i++) {
             currList.add(i);
             backtracking(result, currList, i+1, n, k);
             currList.remove(currList.size()-1);
         }
+    }
+
+    private void backtracking_bad(List<List<Integer>> res, List<Integer> list, int n, int k, int index) {
+        if (list.size() == k) {
+            res.add(new LinkedList<>(list));
+            return;
+        }
+
+        if (index > n) {
+            return;
+        }
+
+        list.add(index);
+        backtracking_bad(res, list, n, k, index + 1);
+
+        list.remove(list.size() - 1);
+        backtracking_bad(res, list, n, k, index + 1);
     }
 
     public static void main(String[] args) {
